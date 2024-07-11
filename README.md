@@ -141,3 +141,12 @@ localhost:~ # ./create-box.sh /home/max/libvirt/images/debian12.qcow2 /home/max/
     cat /otus/test/task1/file_mess/secret_message
 ```
 Готово!
+
+К данной работе прилагаю также запись консоли. Для того, чтобы воспроизвести выполненные действия,
+необходимо скачать файлы [screenrecord-2024-07-11.script](screenrecord-2024-07-11.script) и [screenrecord-2024-07-11.time](screenrecord-2024-07-11.time),
+после чего выполнить в каталоге с загруженными файлами команду
+```
+scriptreplay ./screenrecord-2024-07-11.time ./screenrecord-2024-07-11.script
+```
+
+Спасибо за прочтение! :potted_plant:
