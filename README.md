@@ -28,6 +28,8 @@ max@localhost:~/vagrant/vg3> vagrant -v
 Vagrant 2.2.18
 ```
 Образ операционной системы создан заранее, для этого установлен [Debian Linux из официального образа netinst](https://www.debian.org/distrib/netinst)
+
+#### Подготовка базового образа
 Подготовим образ для работы. Для этого добавим репозиторий ***contrib*** в файл /etc/apt/sources.list:
 ```
 root@debian12:~# sed -r -i'.BAK' 's/^deb(.*)$/deb\1 contrib/g' /etc/apt/sources.list
@@ -55,7 +57,8 @@ vagrant@debian12:~$ wget -O otus_task2.file --no-check-certificate 'https://driv
 ```
 root@debian12:~# shutdown -P now
 ```
-И создаем новый бокс:
+#### Сборка нового бокса на базе обновленного образа виртуальной машины
+Создаем новый бокс:
 ```
 localhost:~ # rm /home/max/vagrant/images/debian12
 localhost:~ # rm -rf /home/max/.vagrant.d
@@ -86,6 +89,7 @@ localhost:~ # ./create-box.sh /home/max/libvirt/images/debian12.qcow2 /home/max/
     lv.storage :file, :size => '1G', :device => 'vdi', :allow_existing => false
   end
 ```
+#### Создание пулов ***zpool*** и файловых систем ***zfs***
 Создаём пулы и задаем разные методы сжатия на них:
 ```
     zpool create data1 mirror /dev/vdb /dev/vdc
@@ -98,6 +102,7 @@ localhost:~ # ./create-box.sh /home/max/libvirt/images/debian12.qcow2 /home/max/
     zfs set compression=zle data4
     zfs get all | grep compression
 ```
+#### Работа с фафйловыми системами, тестирование, сравнение
 Скопируем скачаный файл журнала на наши пулы с разными алгоритмами сжатия. После этого сравним их эффективность:
 ```
     for i in {1..4}; do cp /home/vagrant/pg2600.converter.log /data$i; done
