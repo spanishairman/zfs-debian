@@ -1,0 +1,264 @@
+Script started on 2024-07-11 13:30:23+03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="270" LINES="63"]
+7]2;max@localhost.localdomain:~/vagrant/vg3]1;localhost.localdomain8max@localhost:~/vagrant/vg3> vagrant up
+[0mBringing machine 'Debian12' up with 'libvirt' provider...[0m
+[1;33m==> Debian12: No version detected for /home/max/vagrant/images/debian12, using timestamp to watch for modifications. Consider
+==> Debian12: generating a local metadata for the box with a version to allow better handling.
+==> Debian12: See https://www.vagrantup.com/docs/boxes/format#box-metadata for further details.[0m
+[1m==> Debian12: Creating image (snapshot of base box volume).[0m
+[1m==> Debian12: Creating domain with the following settings...[0m
+[1m==> Debian12:  -- Name:              vg3_Debian12[0m
+[1m==> Debian12:  -- Title:             Debian12[0m
+[1m==> Debian12:  -- Description:       Виртуальная машина на базе дистрибутива Debian Linux[0m
+[1m==> Debian12:  -- Domain type:       kvm[0m
+[1m==> Debian12:  -- Cpus:              2[0m
+[1m==> Debian12:  -- Feature:           acpi[0m
+[1m==> Debian12:  -- Feature:           apic[0m
+[1m==> Debian12:  -- Feature:           pae[0m
+[1m==> Debian12:  -- Clock offset:      utc[0m
+[1m==> Debian12:  -- Memory:            3072M[0m
+[1m==> Debian12:  -- Management MAC:    52:54:00:27:28:83[0m
+[1m==> Debian12:  -- Loader:            [0m
+[1m==> Debian12:  -- Nvram:             [0m
+[1m==> Debian12:  -- Base box:          /home/max/vagrant/images/debian12[0m
+[1m==> Debian12:  -- Storage pool:      default[0m
+[1m==> Debian12:  -- Image(vda):        /home/max/libvirt/images/default/vg3_Debian12.img, virtio, 40G[0m
+[1m==> Debian12:  -- Disk driver opts:  cache='default'[0m
+[1m==> Debian12:  -- Kernel:            [0m
+[1m==> Debian12:  -- Initrd:            [0m
+[1m==> Debian12:  -- Graphics Type:     vnc[0m
+[1m==> Debian12:  -- Graphics Port:     -1[0m
+[1m==> Debian12:  -- Graphics IP:       127.0.0.1[0m
+[1m==> Debian12:  -- Graphics Password: Not defined[0m
+[1m==> Debian12:  -- Video Type:        cirrus[0m
+[1m==> Debian12:  -- Video VRAM:        16384[0m
+[1m==> Debian12:  -- Video 3D accel:    false[0m
+[1m==> Debian12:  -- Sound Type:        [0m
+[1m==> Debian12:  -- Keymap:            en-us[0m
+[1m==> Debian12:  -- TPM Backend:       passthrough[0m
+[1m==> Debian12:  -- TPM Path:          [0m
+[1m==> Debian12:  -- Disks:         vdb(qcow2, virtio, 1G), vdc(qcow2, virtio, 1G), vdd(qcow2, virtio, 1G), vde(qcow2, virtio, 1G), vdf(qcow2, virtio, 1G), vdg(qcow2, virtio, 1G), vdh(qcow2, virtio, 1G), vdi(qcow2, virtio, 1G)[0m
+[1m==> Debian12:  -- Disk(vdb):     /home/max/libvirt/images/default/vg3_Debian12-vdb.qcow2[0m
+[1m==> Debian12:  -- Disk(vdc):     /home/max/libvirt/images/default/vg3_Debian12-vdc.qcow2[0m
+[1m==> Debian12:  -- Disk(vdd):     /home/max/libvirt/images/default/vg3_Debian12-vdd.qcow2[0m
+[1m==> Debian12:  -- Disk(vde):     /home/max/libvirt/images/default/vg3_Debian12-vde.qcow2[0m
+[1m==> Debian12:  -- Disk(vdf):     /home/max/libvirt/images/default/vg3_Debian12-vdf.qcow2[0m
+[1m==> Debian12:  -- Disk(vdg):     /home/max/libvirt/images/default/vg3_Debian12-vdg.qcow2[0m
+[1m==> Debian12:  -- Disk(vdh):     /home/max/libvirt/images/default/vg3_Debian12-vdh.qcow2[0m
+[1m==> Debian12:  -- Disk(vdi):     /home/max/libvirt/images/default/vg3_Debian12-vdi.qcow2[0m
+[1m==> Debian12:  -- INPUT:             type=mouse, bus=ps2[0m
+[1m==> Debian12: Creating shared folders metadata...[0m
+[1m==> Debian12: Starting domain.[0m
+[1m==> Debian12: Waiting for domain to get an IP address...[0m
+[1m==> Debian12: Waiting for machine to boot. This may take a few minutes...[0m
+[0m    Debian12: SSH address: 192.168.121.10:22[0m
+[0m    Debian12: SSH username: vagrant[0m
+[0m    Debian12: SSH auth method: private key[0m
+[0m    Debian12: Warning: Host unreachable. Retrying...[0m
+[0m    Debian12: Warning: Host unreachable. Retrying...[0m
+[0m    Debian12: 
+    Debian12: Vagrant insecure key detected. Vagrant will automatically replace
+    Debian12: this with a newly generated keypair for better security.[0m
+[0m    Debian12: 
+    Debian12: Inserting generated public key within guest...[0m
+[0m    Debian12: Removing insecure key from the guest if it's present...[0m
+[0m    Debian12: Key inserted! Disconnecting and reconnecting using new SSH key...[0m
+[1m==> Debian12: Machine booted and ready![0m
+[1m==> Debian12: Running provisioner: shell...[0m
+[0m    Debian12: Running: inline script[0m
+[0;32m    Debian12: *************************************************************[0m
+[0;32m    Debian12: Создадим пулы raid1[0m
+[0;32m    Debian12: *************************************************************[0m
+[0;32m    Debian12: data1  compression           lzjb                       local[0m
+[0;32m    Debian12: data2  compression           lz4                        local[0m
+[0;32m    Debian12: data3  compression           gzip-9                     local[0m
+[0;32m    Debian12: data4  compression           zle                        local[0m
+[0;32m    Debian12: Скопируем скачаный файл журнала на наши пулы с разными алгоритмами сжатия. После этого сравним их эффективность[0m
+[0;32m    Debian12: Выводим список файлов[0m
+[0;32m    Debian12: /data1:[0m
+[0;32m    Debian12: итого 22M[0m
+[0;32m    Debian12: -rw-r--r-- 1 root root 40M июл 11 13:31 pg2600.converter.log[0m
+[0;32m    Debian12: [0m
+[0;32m    Debian12: /data2:[0m
+[0;32m    Debian12: итого 18M[0m
+[0;32m    Debian12: -rw-r--r-- 1 root root 40M июл 11 13:31 pg2600.converter.log[0m
+[0;32m    Debian12: [0m
+[0;32m    Debian12: /data3:[0m
+[0;32m    Debian12: итого 11M[0m
+[0;32m    Debian12: -rw-r--r-- 1 root root 40M июл 11 13:31 pg2600.converter.log[0m
+[0;32m    Debian12: [0m
+[0;32m    Debian12: /data4:[0m
+[0;32m    Debian12: итого 36M[0m
+[0;32m    Debian12: -rw-r--r-- 1 root root 40M июл 11 13:31 pg2600.converter.log[0m
+[0;32m    Debian12: Список файловых систем[0m
+[0;32m    Debian12: NAME    USED  AVAIL     REFER  MOUNTPOINT[0m
+[0;32m    Debian12: data1  21.7M   810M     21.6M  /data1[0m
+[0;32m    Debian12: data2  17.7M   814M     17.6M  /data2[0m
+[0;32m    Debian12: data3  10.5M   821M     10.4M  /data3[0m
+[0;32m    Debian12: data4  35.1M   797M     35.0M  /data4[0m
+[0;32m    Debian12: Распакуем архив с экспортированным пулом[0m
+[0;32m    Debian12: zpoolexport/[0m
+[0;32m    Debian12: zpoolexport/filea[0m
+[0;32m    Debian12: zpoolexport/fileb[0m
+[0;32m    Debian12: Проверим возможность импорта[0m
+[0;32m    Debian12:    pool: otus[0m
+[0;32m    Debian12:      id: 6554193320433390805[0m
+[0;32m    Debian12:   state: ONLINE[0m
+[0;32m    Debian12: status: Some supported features are not enabled on the pool.[0m
+[0;32m    Debian12: 	(Note that they may be intentionally disabled if the[0m
+[0;32m    Debian12: 	'compatibility' property is set.)[0m
+[0;32m    Debian12:  action: The pool can be imported using its name or numeric identifier, though[0m
+[0;32m    Debian12: 	some features will not be available without an explicit 'zpool upgrade'.[0m
+[0;32m    Debian12:  config:[0m
+[0;32m    Debian12: [0m
+[0;32m    Debian12: 	otus                                 ONLINE[0m
+[0;32m    Debian12: 	  mirror-0                           ONLINE[0m
+[0;32m    Debian12: 	    /home/vagrant/zpoolexport/filea  ONLINE[0m
+[0;32m    Debian12: 	    /home/vagrant/zpoolexport/fileb  ONLINE[0m
+[0;32m    Debian12: Импортируем[0m
+[0;32m    Debian12: Выводим параметры zpool и zfs[0m
+[0;32m    Debian12: NAME  PROPERTY                       VALUE                          SOURCE[0m
+[0;32m    Debian12: otus  size                           480M                           -[0m
+[0;32m    Debian12: otus  capacity                       0%                             -[0m
+[0;32m    Debian12: otus  altroot                        -                              default[0m
+[0;32m    Debian12: otus  health                         ONLINE                         -[0m
+[0;32m    Debian12: otus  guid                           6554193320433390805            -[0m
+[0;32m    Debian12: otus  version                        -                              default[0m
+[0;32m    Debian12: otus  bootfs                         -                              default[0m
+[0;32m    Debian12: otus  delegation                     on                             default[0m
+[0;32m    Debian12: otus  autoreplace                    off                            default[0m
+[0;32m    Debian12: otus  cachefile                      -                              default[0m
+[0;32m    Debian12: otus  failmode                       wait                           default[0m
+[0;32m    Debian12: otus  listsnapshots                  off                            default[0m
+[0;32m    Debian12: otus  autoexpand                     off                            default[0m
+[0;32m    Debian12: otus  dedupratio                     1.00x                          -[0m
+[0;32m    Debian12: otus  free                           478M                           -[0m
+[0;32m    Debian12: otus  allocated                      2.21M                          -[0m
+[0;32m    Debian12: otus  readonly                       off                            -[0m
+[0;32m    Debian12: otus  ashift                         0                              default[0m
+[0;32m    Debian12: otus  comment                        -                              default[0m
+[0;32m    Debian12: otus  expandsize                     -                              -[0m
+[0;32m    Debian12: otus  freeing                        0                              -[0m
+[0;32m    Debian12: otus  fragmentation                  0%                             -[0m
+[0;32m    Debian12: otus  leaked                         0                              -[0m
+[0;32m    Debian12: otus  multihost                      off                            default[0m
+[0;32m    Debian12: otus  checkpoint                     -                              -[0m
+[0;32m    Debian12: otus  load_guid                      9649725127892074275            -[0m
+[0;32m    Debian12: otus  autotrim                       off                            default[0m
+[0;32m    Debian12: otus  compatibility                  off                            default[0m
+[0;32m    Debian12: otus  feature@async_destroy          enabled                        local[0m
+[0;32m    Debian12: otus  feature@empty_bpobj            active                         local[0m
+[0;32m    Debian12: otus  feature@lz4_compress           active                         local[0m
+[0;32m    Debian12: otus  feature@multi_vdev_crash_dump  enabled                        local[0m
+[0;32m    Debian12: otus  feature@spacemap_histogram     active                         local[0m
+[0;32m    Debian12: otus  feature@enabled_txg            active                         local[0m
+[0;32m    Debian12: otus  feature@hole_birth             active                         local[0m
+[0;32m    Debian12: otus  feature@extensible_dataset     active                         local[0m
+[0;32m    Debian12: otus  feature@embedded_data          active                         local[0m
+[0;32m    Debian12: otus  feature@bookmarks              enabled                        local[0m
+[0;32m    Debian12: otus  feature@filesystem_limits      enabled                        local[0m
+[0;32m    Debian12: otus  feature@large_blocks           enabled                        local[0m
+[0;32m    Debian12: otus  feature@large_dnode            enabled                        local[0m
+[0;32m    Debian12: otus  feature@sha512                 enabled                        local[0m
+[0;32m    Debian12: otus  feature@skein                  enabled                        local[0m
+[0;32m    Debian12: otus  feature@edonr                  enabled                        local[0m
+[0;32m    Debian12: otus  feature@userobj_accounting     active                         local[0m
+[0;32m    Debian12: otus  feature@encryption             enabled                        local[0m
+[0;32m    Debian12: otus  feature@project_quota          active                         local[0m
+[0;32m    Debian12: otus  feature@device_removal         enabled                        local[0m
+[0;32m    Debian12: otus  feature@obsolete_counts        enabled                        local[0m
+[0;32m    Debian12: otus  feature@zpool_checkpoint       enabled                        local[0m
+[0;32m    Debian12: otus  feature@spacemap_v2            active                         local[0m
+[0;32m    Debian12: otus  feature@allocation_classes     enabled                        local[0m
+[0;32m    Debian12: otus  feature@resilver_defer         enabled                        local[0m
+[0;32m    Debian12: otus  feature@bookmark_v2            enabled                        local[0m
+[0;32m    Debian12: otus  feature@redaction_bookmarks    disabled                       local[0m
+[0;32m    Debian12: otus  feature@redacted_datasets      disabled                       local[0m
+[0;32m    Debian12: otus  feature@bookmark_written       disabled                       local[0m
+[0;32m    Debian12: otus  feature@log_spacemap           disabled                       local[0m
+[0;32m    Debian12: otus  feature@livelist               disabled                       local[0m
+[0;32m    Debian12: otus  feature@device_rebuild         disabled                       local[0m
+[0;32m    Debian12: otus  feature@zstd_compress          disabled                       local[0m
+[0;32m    Debian12: otus  feature@draid                  disabled                       local[0m
+[0;32m    Debian12: NAME  PROPERTY              VALUE                      SOURCE[0m
+[0;32m    Debian12: otus  type                  filesystem                 -[0m
+[0;32m    Debian12: otus  creation              Пт мая 15  7:00 2020  -[0m
+[0;32m    Debian12: otus  used                  2.04M                      -[0m
+[0;32m    Debian12: otus  available             350M                       -[0m
+[0;32m    Debian12: otus  referenced            24K                        -[0m
+[0;32m    Debian12: otus  compressratio         1.00x                      -[0m
+[0;32m    Debian12: otus  mounted               yes                        -[0m
+[0;32m    Debian12: otus  quota                 none                       default[0m
+[0;32m    Debian12: otus  reservation           none                       default[0m
+[0;32m    Debian12: otus  recordsize            128K                       local[0m
+[0;32m    Debian12: otus  mountpoint            /otus                      default[0m
+[0;32m    Debian12: otus  sharenfs              off                        default[0m
+[0;32m    Debian12: otus  checksum              sha256                     local[0m
+[0;32m    Debian12: otus  compression           zle                        local[0m
+[0;32m    Debian12: otus  atime                 on                         default[0m
+[0;32m    Debian12: otus  devices               on                         default[0m
+[0;32m    Debian12: otus  exec                  on                         default[0m
+[0;32m    Debian12: otus  setuid                on                         default[0m
+[0;32m    Debian12: otus  readonly              off                        default[0m
+[0;32m    Debian12: otus  zoned                 off                        default[0m
+[0;32m    Debian12: otus  snapdir               hidden                     default[0m
+[0;32m    Debian12: otus  aclmode               discard                    default[0m
+[0;32m    Debian12: otus  aclinherit            restricted                 default[0m
+[0;32m    Debian12: otus  createtxg             1                          -[0m
+[0;32m    Debian12: otus  canmount              on                         default[0m
+[0;32m    Debian12: otus  xattr                 on                         default[0m
+[0;32m    Debian12: otus  copies                1                          default[0m
+[0;32m    Debian12: otus  version               5                          -[0m
+[0;32m    Debian12: otus  utf8only              off                        -[0m
+[0;32m    Debian12: otus  normalization         none                       -[0m
+[0;32m    Debian12: otus  casesensitivity       sensitive                  -[0m
+[0;32m    Debian12: otus  vscan                 off                        default[0m
+[0;32m    Debian12: otus  nbmand                off                        default[0m
+[0;32m    Debian12: otus  sharesmb              off                        default[0m
+[0;32m    Debian12: otus  refquota              none                       default[0m
+[0;32m    Debian12: otus  refreservation        none                       default[0m
+[0;32m    Debian12: otus  guid                  14592242904030363272       -[0m
+[0;32m    Debian12: otus  primarycache          all                        default[0m
+[0;32m    Debian12: otus  secondarycache        all                        default[0m
+[0;32m    Debian12: otus  usedbysnapshots       0B                         -[0m
+[0;32m    Debian12: otus  usedbydataset         24K                        -[0m
+[0;32m    Debian12: otus  usedbychildren        2.01M                      -[0m
+[0;32m    Debian12: otus  usedbyrefreservation  0B                         -[0m
+[0;32m    Debian12: otus  logbias               latency                    default[0m
+[0;32m    Debian12: otus  objsetid              54                         -[0m
+[0;32m    Debian12: otus  dedup                 off                        default[0m
+[0;32m    Debian12: otus  mlslabel              none                       default[0m
+[0;32m    Debian12: otus  sync                  standard                   default[0m
+[0;32m    Debian12: otus  dnodesize             legacy                     default[0m
+[0;32m    Debian12: otus  refcompressratio      1.00x                      -[0m
+[0;32m    Debian12: otus  written               24K                        -[0m
+[0;32m    Debian12: otus  logicalused           1020K                      -[0m
+[0;32m    Debian12: otus  logicalreferenced     12K                        -[0m
+[0;32m    Debian12: otus  volmode               default                    default[0m
+[0;32m    Debian12: otus  filesystem_limit      none                       default[0m
+[0;32m    Debian12: otus  snapshot_limit        none                       default[0m
+[0;32m    Debian12: otus  filesystem_count      none                       default[0m
+[0;32m    Debian12: otus  snapshot_count        none                       default[0m
+[0;32m    Debian12: otus  snapdev               hidden                     default[0m
+[0;32m    Debian12: otus  acltype               off                        default[0m
+[0;32m    Debian12: otus  context               none                       default[0m
+[0;32m    Debian12: otus  fscontext             none                       default[0m
+[0;32m    Debian12: otus  defcontext            none                       default[0m
+[0;32m    Debian12: otus  rootcontext           none                       default[0m
+[0;32m    Debian12: otus  relatime              off                        default[0m
+[0;32m    Debian12: otus  redundant_metadata    all                        default[0m
+[0;32m    Debian12: otus  overlay               on                         default[0m
+[0;32m    Debian12: otus  encryption            off                        default[0m
+[0;32m    Debian12: otus  keylocation           none                       default[0m
+[0;32m    Debian12: otus  keyformat             none                       default[0m
+[0;32m    Debian12: otus  pbkdf2iters           0                          default[0m
+[0;32m    Debian12: otus  special_small_blocks  0                          default[0m
+[0;32m    Debian12: Восстанавливаем файловую систему из снапшота[0m
+[0;32m    Debian12: Ищем в каталоге /otus/test файл с именем “secret_message”[0m
+[0;32m    Debian12: /otus/test/task1/file_mess/secret_message[0m
+[0;32m    Debian12: Выводим содержимое[0m
+[0;32m    Debian12: https://otus.ru/lessons/linux-hl/[0m
+[0;32m    Debian12: [0m
+7]2;max@localhost.localdomain:~/vagrant/vg3]1;localhost.localdomain8max@localhost:~/vagrant/vg3> exit
+exit
+
+Script done on 2024-07-11 13:31:44+03:00 [COMMAND_EXIT_CODE="0"]
